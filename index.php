@@ -9,6 +9,8 @@
     <header>
         <h1>閲覧画面</h1>
     </header>
-    
+    <footer>
+        
+    </footer>
 </body>
 </html>
