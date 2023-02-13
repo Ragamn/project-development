@@ -7,10 +7,26 @@
 </head>
 <body>
     <header>
-        <h1>閲覧画面</h1>
+        <h1>ログイン画面</h1>
     </header>
+<form action="article-list.php">
+
+<div class="cp_iptxt">
+<input class="ef" type="text" placeholder="">
+<label>お名前</label>
+<span class="focus_bg"></span>
+</div>
+<div class="cp_iptxt">
+<input class="ef" type="text" placeholder="">
+<label>パスワード</label>
+<span class="focus_bg"></span>
+</div>
+<input type="submit" class="send-login">
+</form>
+
     <footer>
         
     </footer>
+    
 </body>
 </html>
