@@ -7,7 +7,16 @@
 </head>
 <body>
     <header>
-        <h1>閲覧画面</h1>
+        <h1 >閲覧画面</h1>
+        <div class="login">
+        <button type="button" class="button1" onclick="location.href='login.php'">
+        ログイン
+        </button>
+        
+        <button type="button" class="button2" onclick="location.href='create-user.php'">
+        新規作成
+        </button>
+        </div>
     </header>
     <footer>
         
