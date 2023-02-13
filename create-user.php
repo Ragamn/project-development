@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>閲覧画面</h1>
+        <h1>ユーザー新規作成画面</h1>
     </header>
     <footer>
         

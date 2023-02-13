@@ -3,7 +3,7 @@ header{
     width:100%;
     background-color:blueviolet;
     display: flex;
-
+    justify-content: space-between;
 }
 body{
     margin: 0;
@@ -19,6 +19,8 @@ footer{
 
 .login{
     text-align: right;
-    justify-content: space-between;
+    display:flex;
+    flex-flow: column;
+    margin-top: 20px;
 }
 
