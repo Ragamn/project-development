@@ -18,6 +18,19 @@
         </button>
         </div>
     </header>
+    <?php
+        require_once 'db_connect.php';
+        $sql = "select * from post"
+        $stm = $pdo->prepare($sql);
+         //SQL文を実行する
+        $stm->execute();
+        //結果を配列として全件表示する
+        $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+        echo "<pre>";
+        var_dump($result);
+        echo "<pre>";
+    ?>
     <footer>
         
     </footer>
