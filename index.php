@@ -32,7 +32,9 @@
         // var_dump($result);
         // echo "<pre>";
         foreach($result as $data){
-            echo $data['title'];
+             ?>
+            <a href=""><?php echo $data['title'];?></a> 
+            <?php
             echo "<br></br>";
             echo $data['content'];
             echo "<br></br>";
