@@ -6,7 +6,7 @@
     //パスワード
     $pass = "";
     //データベース名
-    $database = "";
+    $database = "project-development";
     //サーバー名
     $server = "localhost:3308";
 
