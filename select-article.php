@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>閲覧画面</h1>
+        <h1>検索画面</h1>
     </header>
     <footer>
         
