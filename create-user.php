@@ -1,16 +1,23 @@
 <?php
-/*
-データベースに接続
-セッションを使うようにする
-POSTがあるか確認する
+
+//データベースに接続
+require_once 'db_connect.php';
+
+//セッションを使うようにする
+session_start();
+//POSTがあるか確認する
+if(!empty($_POST)){
+
+}
     ユーザー名があるか確認
     年齢 (数字であるかどうか)
     性別
     PW
 これらのデータがすべてそろったらデータベースに挿入
 ログイン画面に遷移する
-*/
 
+
+require_once 'db_connect.php';
 
 
 
