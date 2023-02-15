@@ -86,3 +86,8 @@ footer{
     margin-left: 1025px;
 }
 
+.list{
+	display: block;
+	justify-content: center;
+	background-color: aquamarine;
+}
