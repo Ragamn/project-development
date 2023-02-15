@@ -29,7 +29,11 @@ $error_flag = 0;
 
 if(!empty($_POST)){
     if(User_register($username,$age,$gender,$password)){
-        echo "登録完了";
+        $_SESSION['username'] = $username;
+        $_SESSION['age'] = $age;
+        $_SESSION['gender'] = $gender;
+        $_SESSION['password'] = $password;
+        header('Location:create-user-confirm.php');
     }
 }
     //ユーザー名があるか確認
