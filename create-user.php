@@ -1,15 +1,12 @@
 <?php
-
-//データベースに接続
-require_once 'db_connect.php';
-
+    require_once 'function.php';
 //セッションを使うようにする
 session_start();
 //POSTがあるか確認する
 $error_flag = 0;
     if(isset($_POST) && !empty($_POST)){
-        if(!empty($_POST['name'])){
-            $username = $_POST['name'];
+        if(!empty($_POST['username'])){
+            $username = $_POST['username'];
         }else{
             $error_flag = 1;
         }
@@ -31,15 +28,9 @@ $error_flag = 0;
     }
 
 if(!empty($_POST)){
-    require_once 'db_connect.php';
-    $sql = "insert into account (username,gender,age,password) values (:username,:gender,:age,:password)";
-    $stm = $pdo->prepare($sql);
-    $stm->bindValue(':username',$username,PDO::PARAM_STR);
-    $stm->bindValue(':age',$age,PDO::PARAM_INT);
-    $stm->bindValue(':gender',$gender,PDO::PARAM_INT);
-    $stm->bindValue(':password',$password,PDO::PARAM_STR);
-     //SQL文を実行する
-    $stm->execute();
+    if(User_register($username,$age,$gender,$password)){
+        echo "登録完了";
+    }
 }
     //ユーザー名があるか確認
     //年齢 (数字であるかどうか)
@@ -80,7 +71,7 @@ if(!empty($_POST)){
 <div class="create-user">
     <form action="create-user.php" method="post">
     ユーザー名
-    <input type="text" name="name">
+    <input type="text" name="username">
     年齢
     <input type="text" name="age">
     性別
