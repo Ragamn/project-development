@@ -18,6 +18,7 @@
         </button>
         </div>
     </header>
+    <div class="list">
     <?php
         require_once 'db_connect.php';
         echo "<br></br>";
@@ -37,6 +38,7 @@
             echo "<br></br>";
         }
     ?>
+    </div>
     <footer>
         
     </footer>
