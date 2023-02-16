@@ -22,9 +22,6 @@ session_start();
     }
     $userid = $_SESSION['id'];
     $deleteflag = 0;
-    echo $title;
-    echo $post;
-    echo $share;
     if(isset($title) && isset($post) && isset($share) && isset($deleteflag)){
         if(Post($userid,$title,$post,$share,$deleteflag)){
             echo "投稿完了";
