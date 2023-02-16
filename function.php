@@ -26,8 +26,27 @@
             $stm->bindValue(':username',$username,PDO::PARAM_STR);
             $stm->bindValue(':password',$password,PDO::PARAM_STR);
 
-             $stm->execute();
+            $stm->execute();
             return $stm->fetch(PDO::FETCH_ASSOC);;
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }finally{
+            $pdo = null;
+        }
+    }
+
+    function Post($userid,$title,$post,$share,$deleteflag){
+        try{
+            $sql = "INSERT INTO post(userid,title,post,share,delete_flag) VALUES (:userid,:title,:post,:share,:deleteflag)";
+            $stm = db_connect()->prepare($sql);
+            $stm->bindValue(':userid',$userid,PDO::PARAM_INT);
+            $stm->bindValue(':title',$title,PDO::PARAM_STR);
+            $stm->bindValue(':post',$post,PDO::PARAM_STR);
+            $stm->bindValue(':share',$share,PDO::PARAM_INT);
+            $stm->bindValue(':deleteflag',$title,PDO::PARAM_STR);
+
+            $stm->execute();
+            return true;
         }catch(PDOException $e){
             echo $e->getMessage();
         }finally{
