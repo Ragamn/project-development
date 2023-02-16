@@ -19,6 +19,25 @@
 	
 	</ul>
 	</nav>
+    <?php
+        require_once 'db_connect.php';
+        echo "<br></br>";
+        $sql = "SELECT * FROM post";
+        $stm = $pdo->prepare($sql);
+         //SQL文を実行する
+        $stm->execute();
+        //結果を配列として全件表示する
+        $result = $stm->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach($result as $data){
+             ?>
+            <a href="select-article.php?id=<?php echo $data['id']?>"><?php echo $data['title'];?></a> 
+            <?php
+            echo "<br></br>";
+            echo $data['post'];
+            echo "<br></br>";
+        }
+    ?>
     <footer>
         
     </footer>
