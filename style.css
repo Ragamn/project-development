@@ -86,3 +86,7 @@ footer{
     margin-left: 1025px;
 }
 
+.list{
+	justify-content: center;
+	background-color: aquamarine;
+}
