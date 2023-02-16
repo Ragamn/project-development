@@ -9,6 +9,16 @@
     <header>
         <h1>削除画面</h1>
     </header>
+    <nav>
+	<ul>
+	<li class="current"><a href="article-list.php">Home</a></li>
+	<li><a href="article-post.php">記事投稿</a></li>
+	<li><a href="article-delete.php">記事削除</a></li>
+	<li><a href="article-edit.php">記事編集</a></li>
+
+	
+	</ul>
+	</nav>
     <footer>
         
     </footer>

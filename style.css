@@ -1,10 +1,9 @@
 header{
-    /* position: absolute; */
-    width:100%;
+	position: top;
+	width:100%;
     background-color:blueviolet;
-    display: flex;
-    justify-content: space-between;
 }
+
 body{
     margin: 0;
 }
@@ -86,7 +85,28 @@ footer{
     margin-left: 1025px;
 }
 
-.list{
-	justify-content: center;
-	background-color: aquamarine;
-}
+nav{
+	text-align: center;
+	}
+	nav ul{
+	margin: 0 ;
+	padding: 0 ;
+	}
+	nav ul li{
+	list-style: none;
+	display: inline-block;
+	width: 18%;
+	min-width: 90px;
+	}
+	nav ul li a{
+	text-decoration: none;
+	color: #333;
+	}
+	nav ul li.current a{
+	color: #F33135;
+	}
+	nav ul li a:hover{
+	color: #E7DA66;
+	}
+	
+	

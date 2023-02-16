@@ -46,6 +46,7 @@ session_start();
         <form action="article-post.php" method="post">
 
     </header>
+    
 
     <form action="post_insert.php" method="post">
             <input type="text" name="title" placeholder="タイトルを入力" required><br>
