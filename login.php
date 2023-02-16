@@ -18,11 +18,11 @@
     if(isset($username) && isset($password)){
         $result = Login($username,$password);
         if($username === $result['username'] && $password === $result['password']){
-            echo "ログイン成功";
             $_SESSION['id'] = $result['id'];
             $_SESSION['username'] = $result['username'];
             $_SESSION['gender'] = $result['gender'];
             $_SESSION['age'] = $result['age'];
+            header('Location:article-list.php');
         }
     } 
 ?>

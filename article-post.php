@@ -56,30 +56,6 @@ session_start();
     </header>
 
 
-    <?php
-        require_once 'db_connect.php';
-        echo "<br></br>";
-        $sql = "select * from post";
-        $stm = $pdo->prepare($sql);
-         //SQL文を実行する
-        $stm->execute();
-        //結果を配列として全件表示する
-        $result = $stm->fetchAll(PDO::FETCH_ASSOC);
-
-        // echo "<pre>";
-        // var_dump($result);
-        // echo "<pre>";
-        foreach($result as $data){
-             ?>
-            <a href=""><?php echo $data['title'];?></a> 
-            <?php
-            echo "<br></br>";
-            echo $data['content'];
-            echo "<br></br>";
-        }
-    ?>
-
-
     <footer>
         
     </footer>
