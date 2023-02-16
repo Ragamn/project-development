@@ -1,5 +1,13 @@
 <?php
     session_start();
+
+    if($_SESSION['gender'] == 1){
+        $_SESSION['gender'] = "女";
+    }elseif($_SESSION['gender'] == 2){
+        $_SESSION['gender'] = "男";
+    }else{
+        $_SESSION{'gender'} = "その他";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ja">
