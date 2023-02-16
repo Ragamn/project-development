@@ -9,6 +9,7 @@
     <header>
         <h1>投稿画面</h1>
     </header>
+    
 
     <form action="post_insert.php" method="post">
             <input type="text" name="title" placeholder="タイトルを入力" required><br>
