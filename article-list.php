@@ -22,7 +22,7 @@
     <?php
         require_once 'db_connect.php';
         echo "<br></br>";
-        $sql = "SELECT * FROM post";
+        $sql = "SELECT * FROM post WHERE share = 1 AND delete_flag = 0";
         $stm = $pdo->prepare($sql);
          //SQL文を実行する
         $stm->execute();
