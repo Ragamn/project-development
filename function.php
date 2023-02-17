@@ -54,7 +54,7 @@
         }
     }
 
-    function Post($title,$post,$share,$id){
+    function Update($title,$post,$share,$id){
         try{
             $sql = "UPDATE post SET title = ':title',post = ':post',share=':share' WHERE id = :id";
             $stm = db_connect()->prepare($sql);
