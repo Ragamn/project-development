@@ -53,3 +53,21 @@
             $pdo = null;
         }
     }
+
+    function Post($title,$post,$share,$id){
+        try{
+            $sql = "UPDATE post SET title = ':title',post = ':post',share=':share' WHERE id = :id";
+            $stm = db_connect()->prepare($sql);
+            $stm->bindValue(':title',$title,PDO::PARAM_STR);
+            $stm->bindValue(':post',$post,PDO::PARAM_STR);
+            $stm->bindValue(':share',$share,PDO::PARAM_INT);
+            $stm->bindValue(':id',$id,PDO::PARAM_INT);
+
+            $stm->execute();
+            return true;
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }finally{
+            $pdo = null;
+        }
+    }

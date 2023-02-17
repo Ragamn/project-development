@@ -31,8 +31,9 @@
 
         foreach($result as $data){
              ?>
-            <?php echo $data['title'];?><button type="button" onclick="location.href='article-delete2.php'"></button>
+            <button type="button" onclick="location.href='article-delete2.php?id=<?php echo $data['id']?>'">削除</button>
             <?php
+
             echo "<br></br>";
             echo $data['post'];
             echo "<br></br>";
