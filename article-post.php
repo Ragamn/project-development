@@ -2,17 +2,16 @@
 session_start();
     require_once 'function.php';
 
-    $error_flag = 0;
+    if($_POST){
+    $error_flag = true;
+    $title = trim($_POST['title'],"\x20\t\n\r\0\v　");
+    $post = trim($_POST['post'],"\x20\t\n\r\0\v　");
     if(isset($_POST) && !empty($_POST)){
-        if(!empty($_POST['title'])){
-            $title = $_POST['title'];
-        }else{
-            $error_flag = 1;
+        if(empty($title)){
+            $error_flag = false;
         }
-        if(!empty($_POST['post'])){
-            $post = $_POST['post'];
-        }else{
-            $error_flag = 1;
+        if(empty($post)){
+            $error_flag = false;
         }
         if(!empty($_POST['share'])){
             $share = $_POST['share'];
@@ -22,12 +21,15 @@ session_start();
     }
     $userid = $_SESSION['id'];
     $deleteflag = 0;
-    if(isset($title) && isset($post) && isset($share) && isset($deleteflag)){
-        if(Post($userid,$title,$post,$share,$deleteflag)){
-            echo "投稿完了";
-            header('Location:article-list.php');
-        }
-    } 
+    if($error_flag){
+        if(isset($title) && isset($post) && isset($share) && isset($deleteflag)){
+            if(Post($userid,$title,$post,$share,$deleteflag)){
+                echo "投稿完了";
+                header('Location:article-list.php');
+            }
+        } 
+    }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="ja">
