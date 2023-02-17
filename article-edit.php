@@ -31,7 +31,7 @@
 
         foreach($result as $data){
              ?>
-            <a href="select-article.php?id=<?php echo $data['id']?>"><?php echo $data['title'];?></a> 
+            <?php echo $data['title'];?><button type="button" onclick="location.href='article-edit2.php?id=<?php echo $data['id']?>'">編集</button>
             <?php
             echo "<br></br>";
             echo $data['post'];
