@@ -71,3 +71,18 @@
             $pdo = null;
         }
     }
+
+    function Post_delete($id){
+        try{
+            $sql = "UPDATE post SET delete_flag = 1 WHERE id = :id";
+            $stm = db_connect()->prepare($sql);
+            $stm->bindValue(':id',$id,PDO::PARAM_INT);
+
+            $stm->execute();
+            return true;
+        }catch(PDOException $e){
+            echo $e->getMessage();
+        }finally{
+            $pdo = null;
+        }
+    }
