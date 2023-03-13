@@ -33,7 +33,7 @@
     ?>
     <form action="#" method="post">
         編集 <input type="text" name="title" placeholder="タイトルを入力" required value="<?php echo $result['title']?>"><br>
-        <textarea name="post" rows="10" cols="50" required placeholder="<?php echo $result['post']?>"></textarea><br>
+        <textarea name="post" rows="10" cols="50" required ><?php echo $result['post']?></textarea><br>
         <input type="radio" name="share"  <?php echo $public?>>公開
         <input type="radio" name="share" <?php echo $private?>>非公開<br>
         <input type="submit" value="編集">
