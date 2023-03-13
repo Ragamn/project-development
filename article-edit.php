@@ -1,3 +1,8 @@
+<?php
+    if(isset($_POST)){
+        echo "編集完了";
+    }
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
