@@ -16,8 +16,9 @@
             $share = $_POST['share'];
         }else{
             $error_flag = 1;
-        }
+        }    
     }
+
     $deleteflag = 0;
     if($error_flag){
         if(isset($title) && isset($post) && isset($share)){
@@ -25,7 +26,7 @@
                 echo "編集完了";
                 header('Location:article-edit.php');
             }
-        } 
+        }
     }
 
     }
