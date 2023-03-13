@@ -45,7 +45,16 @@ session_start();
         <form action="article-post.php" method="post">
 
     </header>
-    
+    <nav>
+	<ul>
+	<li><a href="article-list.php">Home</a></li>
+	<li class="current"><a href="article-post.php">記事投稿</a></li>
+	<li><a href="article-delete.php">記事削除</a></li>
+	<li><a href="article-edit.php">記事編集</a></li>
+
+	
+	</ul>
+	</nav>
 
     <form action="post_insert.php" method="post">
             <input type="text" name="title" placeholder="タイトルを入力" required><br>

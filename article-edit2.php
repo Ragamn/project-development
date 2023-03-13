@@ -38,7 +38,7 @@
         <input type="radio" name="share" <?php echo $private?>>非公開<br>
         <input type="submit" value="編集">
     </form>
-
+        
     <footer>
         
     </footer>
