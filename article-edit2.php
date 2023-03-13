@@ -18,13 +18,12 @@
             $error_flag = 1;
         }
     }
-    $userid = $_SESSION['id'];
     $deleteflag = 0;
     if($error_flag){
-        if(isset($title) && isset($post) && isset($share) && isset($deleteflag)){
-            if(Post($userid,$title,$post,$share,$deleteflag)){
-                echo "投稿完了";
-                header('Location:article-list.php');
+        if(isset($title) && isset($post) && isset($share)){
+            if(Update($title,$post,$share,$id)){
+                echo "編集完了";
+                header('Location:article-edit.php');
             }
         } 
     }
