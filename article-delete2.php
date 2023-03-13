@@ -1,3 +1,8 @@
+<?php
+    if(isset($_POST['YES'])){
+        echo "削除しました。";
+    }
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -19,8 +24,13 @@
 	
 	</ul>
 	</nav>
-    <input class="favorite styled" type="button" value="YES">
-    <input class="favorite styled" type="button" value="NO">
+    <h1>削除しますか？</h1>
+    <form action="article-delete2.php" method="POST">
+    <input type="submit" value="YES" name="YES">
+    </form>
+    <form action="article-delete2.php" method="POST">
+    <input type="submit" value="NO" name="NO">
+    </form>
     <footer>
         
     </footer>
