@@ -19,6 +19,8 @@
 	
 	</ul>
 	</nav>
+    <input class="favorite styled" type="button" value="YES">
+    <input class="favorite styled" type="button" value="NO">
     <footer>
         
     </footer>
