@@ -36,29 +36,7 @@ if(!empty($_POST)){
         header('Location:create-user-confirm.php');
     }
 }
-    //ユーザー名があるか確認
-    //年齢 (数字であるかどうか)
-    //性別
-    //PW
-//これらのデータがすべてそろったらデータベースに挿入
-//ログイン画面に遷移する
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -87,6 +65,7 @@ if(!empty($_POST)){
     <input type="submit">
     </form>
 </div>
+    <button type="button" onclick="location.href='index.php'">戻る</button>
     <footer>
         
     </footer>
