@@ -56,7 +56,7 @@
 
     function Update($title,$post,$share,$id){
         try{
-            $sql = "UPDATE post SET title = ':title',post = ':post',share=':share' WHERE id = :id";
+            $sql = "UPDATE post SET title = :title, post = :post, share=:share WHERE id = :id";
             $stm = db_connect()->prepare($sql);
             $stm->bindValue(':title',$title,PDO::PARAM_STR);
             $stm->bindValue(':post',$post,PDO::PARAM_STR);

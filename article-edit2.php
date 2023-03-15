@@ -1,36 +1,44 @@
-<?php
+    <?php
+
     require_once 'function.php';
-
-    if($_POST){
-    $error_flag = true;
-    $title = trim($_POST['title'],"\x20\t\n\r\0\v　");
-    $post = trim($_POST['post'],"\x20\t\n\r\0\v　");
-    if(isset($_POST) && !empty($_POST)){
-        if(empty($title)){
-            $error_flag = false;
-        }
-        if(empty($post)){
-            $error_flag = false;
-        }
-        if(!empty($_POST['share'])){
-            $share = $_POST['share'];
-        }else{
-            $error_flag = 1;
-        }    
+    
+    if($_GET){
+        $id=$_GET['id'];
     }
-
-    $deleteflag = 0;
-    if($error_flag){
-        if(isset($title) && isset($post) && isset($share)){
-            if(Update($title,$post,$share,$id)){
-                echo "編集完了";
-                header('Location:article-edit.php');
+    if($_POST){
+        $error_flag = true;
+        $title = trim($_POST['title'],"\x20\t\n\r\0\v　");
+        $post = trim($_POST['post'],"\x20\t\n\r\0\v　");
+        if(isset($_POST) && !empty($_POST)){
+            if(empty($title)){
+                $error_flag = false;
+            }
+            if(empty($post)){
+                $error_flag = false;
+            }
+            if(!empty($_POST['share'])){
+                $share = $_POST['share'];
+            }else{
+                $error_flag = 1;
+            }    
+        }
+    
+        $deleteflag = 0;
+        if($error_flag){
+            if(isset($title) && isset($post) && isset($share)){
+                if(Update($title,$post,$share,$id)){
+                    ?>
+                    <h2><?php echo "編集完了";
+                    ?></h2>
+                    <button type="button" onclick="location.href='article-list.php'">戻る</button>
+                    <?php
+                }
             }
         }
-    }
+    
+        }
+    ?>
 
-    }
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -64,11 +72,11 @@
         }
        
     ?>
-    <form action="article-edit2.php" method="post">
-        編集 <input type="text" name="title" placeholder="タイトルを入力" required value="<?php echo $result['title']?>"><br>
+    <form action="article-edit2.php?id=<?php echo $id?>" method="post">
+        編集<input type="text" name="title" placeholder="タイトルを入力" required value="<?php echo $result['title']?>"><br>
         <textarea name="post" rows="10" cols="50" required ><?php echo $result['post']?></textarea><br>
-        <input type="radio" name="share"  <?php echo $public?>>公開
-        <input type="radio" name="share" <?php echo $private?>>非公開<br>
+        <input type="radio" name="share" value="1" <?php echo $public?>>公開
+        <input type="radio" name="share" value-"0" <?php echo $private?>>非公開<br>
         <input type="submit" value="編集">
     </form>
         
