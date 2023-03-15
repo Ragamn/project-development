@@ -1,4 +1,6 @@
 <?php
+session_start();
+if(isset($_SESSION)){
     require_once 'function.php';
     if($_GET){
         $id=$_GET['id'];
@@ -52,3 +54,8 @@
     </footer>
 </body>
 </html>
+<?php
+    }else{
+        header('Location: index.php');
+    }
+?>
