@@ -20,16 +20,17 @@
              //SQL文を実行する
              $stm->execute();
             //結果を配列として全件表示する
-            $result = $stm->fetchAll(PDO::FETCH_ASSOC); 
-            foreach($result as $data){
-               echo "<br></br>";
-               echo $data['post'];
-               echo "<br></br>";
+            $result = $stm->fetchAll(PDO::FETCH_ASSOC);    
            }
-        }
     ?>
-    <footer>
+        <?php foreach($result as $data): ?>
+            <h1>
+            <h3>タイトル</h3><?php echo $data['title']?>
+            <h3>内容</h3><?php echo $data['post'];?>
+            </h1>
+        <?php endforeach; ?>
+    <!-- <footer>
         
-    </footer>
+    </footer> -->
 </body>
 </html>
