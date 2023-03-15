@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -15,7 +16,6 @@
 	<li><a href="article-post.php">記事投稿</a></li>
 	<li><a href="article-delete.php">記事削除</a></li>
 	<li class="current"><a href="article-edit.php">記事編集</a></li>
-
 	
 	</ul>
 	</nav>
