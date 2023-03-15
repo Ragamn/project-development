@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>ユーザ登録の確認</title>
 </head>
 <body>
     <header>

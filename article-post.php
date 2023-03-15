@@ -41,8 +41,9 @@ session_start();
 <body>
     <header>
         <h1>投稿画面</h1>
-
-        <form action="article-post.php" method="post">
+        <div class="logout">
+        <input type="button"  value="logout" name="logout">
+        </div>
 
     </header>
     <nav>
