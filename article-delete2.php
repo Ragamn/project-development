@@ -26,6 +26,9 @@
 <body>
     <header>
         <h1>削除画面</h1>
+        <div class="logout">
+        <input type="button"  value="logout" name="logout">
+        </div>
     </header>
     <nav>
 	<ul>

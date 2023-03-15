@@ -49,6 +49,9 @@
 <body>
     <header>
         <h1>編集画面</h1>
+        <div class="logout">
+        <input type="button"  value="logout" name="logout">
+        </div>
     </header>
     
     <?php
