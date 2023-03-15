@@ -9,7 +9,7 @@
     <header>
         <h1>検索画面</h1>
         <div class="logout">
-        <input type="button"  value="logout" name="logout">
+        <input type="button" onclick="location.href='logout.php'" value="logout" name="logout">
         </div>
     </header>
     <?php
