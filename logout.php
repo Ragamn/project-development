@@ -9,5 +9,6 @@ session_start();
 
     //セッションファイルの破棄
     session_destroy();
-
+    
+    header('Location: index.php');
 ?>
