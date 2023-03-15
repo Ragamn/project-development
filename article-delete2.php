@@ -1,7 +1,20 @@
 <?php
-    if(isset($_POST['YES'])){
-        echo "削除しました。";
+    require_once 'function.php';
+    if($_GET){
+        $id=$_GET['id'];
     }
+    if(isset($_POST['YES'])){
+        $error_flag = true;
+        if($error_flag){
+                if(Post_delete($id)){
+                    ?>
+                    <h2><?php echo "削除完了";
+                    ?></h2>
+                    <button type="button" onclick="location.href='article-list.php'">戻る</button>
+                    <?php
+                }
+            }
+        }
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -25,10 +38,10 @@
 	</ul>
 	</nav>
     <h1>削除しますか？</h1>
-    <form action="article-delete2.php" method="POST">
+    <form action="article-delete2.php?id=<?php echo $id?>" method="POST">
     <input type="submit" value="YES" name="YES">
     </form>
-    <form action="article-delete2.php" method="POST">
+    <form action="article-delete.php" method="POST">
     <input type="submit" value="NO" name="NO">
     </form>
     <footer>
