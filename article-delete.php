@@ -1,3 +1,7 @@
+<?php
+        session_start();
+    if(isset($_SESSION)){
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -47,3 +51,8 @@
     </footer>
 </body>
 </html>
+<?php
+    }else{
+        header('Location: index.php');
+    }
+?>

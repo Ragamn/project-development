@@ -1,5 +1,9 @@
+<?php
+        session_start();
+    if(isset($_SESSION)){
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -18,8 +22,6 @@
 	<li><a href="article-post.php">記事投稿</a></li>
 	<li><a href="article-delete.php">記事削除</a></li>
 	<li><a href="article-edit.php">記事編集</a></li>
-
-	
 	</ul>
 	</nav>
     <?php
@@ -46,3 +48,8 @@
     </footer>
 </body>
 </html>
+<?php
+    }else{
+        header('Location: index.php');
+    }
+?>
