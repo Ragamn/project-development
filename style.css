@@ -1,7 +1,9 @@
 header{
-	position: top;
-	width:100%;
-    background-color:blueviolet;
+	 width:100%; 
+    background-color:navajowhite;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 body{

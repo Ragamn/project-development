@@ -8,6 +8,9 @@
 <body>
     <header>
         <h1>一覧画面</h1>
+        <div class="logout">
+        <input type="button"  value="logout" name="logout">
+        </div>
     </header>
     <nav>
 	<ul>
