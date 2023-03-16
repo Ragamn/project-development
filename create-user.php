@@ -52,17 +52,25 @@ if(!empty($_POST)){
     </header>
 <div class="create-user">
     <form action="create-user.php" method="post">
-    ユーザー名
+    <div class="label">
+    <p>ユーザー名</p>
     <input type="text" name="username">
-    年齢
+    </div>
+    <div class="label">
+    <p>年齢</p>
     <input type="text" name="age">
-    性別
+    </div>
+    <div class="label">
+    <p>性別</p>
     <input type="radio" name="gender" value=1>女
     <input type="radio" name="gender" value=2>男
     <input type="radio" name="gender" value=3>その他
-    パスワード
+    </div>
+    <div class="label">
+    <p>パスワード</p>
     <input type="password" name="password">
     <input type="submit">
+    </div>
     </form>
 </div>
     <button type="button" onclick="location.href='index.php'">戻る</button>
