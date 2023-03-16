@@ -27,10 +27,12 @@
            }
     ?>
         <?php foreach($result as $data): ?>
-            <h1>
-            <h3>タイトル</h3><?php echo $data['title']?>
-            <h3>内容</h3><?php echo $data['post'];?>
-            </h1>
+            <div class="box2">
+                <center>
+                <font size="7">タイトル</font><h2><?php echo $data['title']?></h2>
+                <font size="7">内容</font><h2><?php echo $data['post'];?></h2>
+                </center>
+            </div>
         <?php endforeach; ?>
     <!-- <footer>
         
