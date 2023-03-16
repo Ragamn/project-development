@@ -76,13 +76,15 @@
         }
        
     ?>
+<div class="create-post">
     <form action="article-edit2.php?id=<?php echo $id?>" method="post">
         編集<input type="text" name="title" placeholder="タイトルを入力" required value="<?php echo $result['title']?>"><br>
         <textarea name="post" rows="10" cols="50" required ><?php echo $result['post']?></textarea><br>
         <input type="radio" name="share" value="1" <?php echo $public?>>公開
-        <input type="radio" name="share" value-"0" <?php echo $private?>>非公開<br>
+        <input type="radio" name="share" value="0" <?php echo $private?>>非公開<br>
         <input type="submit" value="編集">
     </form>
+    </div>
         
     <footer>
         
