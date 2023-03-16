@@ -8,8 +8,8 @@
 <body>
     <header>
         <h1 id="h1">記事画面</h1>
-        <div class="logout">
-        <input type="button" onclick="location.href='logout.php'" value="logout" name="logout">
+        <div class="exit">
+        <input type="button" onclick="history.back()" value="戻る" name="exit">
         </div>
     </header>
     <?php
