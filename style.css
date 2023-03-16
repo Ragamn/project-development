@@ -154,3 +154,24 @@ nav{
     border: solid 1px black;
 	background-color: lemonchiffon;
 }
+.button3{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.button3 button{
+	width:100px;
+	height:50px;
+	background-color:#F33135;
+}
+.button2{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.button2 button{
+	color:#FFF;
+	width:100px;
+	height:50px;
+	background-color:#aaaaaa;
+}
