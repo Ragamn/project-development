@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>検索画面</h1>
+        <h1 id="h1">記事画面</h1>
         <div class="logout">
         <input type="button" onclick="location.href='logout.php'" value="logout" name="logout">
         </div>

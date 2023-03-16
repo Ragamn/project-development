@@ -48,7 +48,7 @@ if(!empty($_POST)){
 </head>
 <body>
     <header>
-        <h1>ユーザー新規作成画面</h1>
+        <h1 id="h1">ユーザー新規作成画面</h1>
         <div class="login">
             <button type="button" onclick="location.href='login.php'">
             ログイン

@@ -49,7 +49,7 @@
 </head>
 <body>
     <header>
-        <h1>編集画面</h1>
+        <h1 id="h1">編集画面</h1>
         <div class="logout">
         <input type="button" onclick="location.href='logout.php'" value="logout" name="logout">
         </div>

@@ -1,6 +1,12 @@
 #h1{
 	color: #FFF;
 }
+button.login{
+	background-color: aqua;
+}
+button.register{
+	background-color: #F33135;
+}
 header{
 	 width:100%; 
     background-color:cornflowerblue;

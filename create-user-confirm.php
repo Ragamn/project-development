@@ -18,7 +18,7 @@
 </head>
 <body>
     <header>
-        <h1>ユーザー作成確認画面</h1>
+        <h1 id="h1">ユーザー作成確認画面</h1>
     </header>
     ユーザー名:<?php echo $_SESSION['username'];?>
     年齢:<?php echo $_SESSION['age'];?>

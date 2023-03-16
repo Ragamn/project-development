@@ -35,7 +35,7 @@
 </head>
 <body>
     <header>
-        <h1>ログイン画面</h1>
+        <h1 id="h1">ログイン画面</h1>
     </header>
 <form action="login.php" method="POST">
 
