@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <h1>編集画面</h1>
+        <h1 id="h1">編集画面</h1>
         <div class="logout">
         <input type="button" onclick="location.href='logout.php'" value="logout" name="logout">
         </div>
@@ -41,7 +41,7 @@
              ?>
              <div class="box2">
             <h1>記事<h1>
-            <?php echo $data['title'];?><button type="button" onclick="location.href='article-edit2.php?id=<?php echo $data['id']?>'">編集</button>
+            <?php echo $data['title'];?><button type="button" class="btn_01" onclick="location.href='article-edit2.php?id=<?php echo $data['id']?>'">編集</button>
             <?php
             echo "<br></br>";
             echo $data['post'];

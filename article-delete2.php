@@ -27,7 +27,7 @@ if(isset($_SESSION)){
 </head>
 <body>
     <header>
-        <h1>削除画面</h1>
+        <h1 id="h1">削除画面</h1>
         <div class="logout">
         <input type="button" onclick="location.href='logout.php'" value="logout" name="logout">
         </div>
