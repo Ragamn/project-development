@@ -49,6 +49,15 @@ if(!empty($_POST)){
 <body>
     <header>
         <h1>ユーザー新規作成画面</h1>
+        <div class="login">
+            <button type="button" onclick="location.href='login.php'">
+            ログイン
+            </button>
+        
+            <button type="button" onclick="location.href='create-user.php'">
+            新規作成
+            </button>
+            </div>
     </header>
 <div class="create-user">
     <form action="create-user.php" method="post">

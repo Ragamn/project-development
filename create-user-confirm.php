@@ -24,6 +24,7 @@
     年齢:<?php echo $_SESSION['age'];?>
     性別:<?php echo $_SESSION['gender'];?>
     パスワード: *******
+    <button type="button" onclick="location.href='index.php'">OK</button>
     <footer>
         
     </footer>
