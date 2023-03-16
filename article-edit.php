@@ -37,11 +37,17 @@
 
         foreach($result as $data){
              ?>
+             <div class="box2">
+            <h1>記事<h1>
             <?php echo $data['title'];?><button type="button" onclick="location.href='article-edit2.php?id=<?php echo $data['id']?>'">編集</button>
             <?php
             echo "<br></br>";
             echo $data['post'];
             echo "<br></br>";
+            ?>
+            </div>
+            <?php
+
         }
     ?>
     <footer>
