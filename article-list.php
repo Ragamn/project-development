@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1>一覧画面</h1>
+        <h1 id="h1">一覧画面</h1>
         <div class="logout">
         <input type="button" onclick="location.href='logout.php'" value="logout" name="logout">
         </div>
@@ -37,7 +37,7 @@
         foreach($result as $data){
              ?>
              <div class="box2">
-            <h1>記事<h1>
+            <h1>記事</h1>
             <a href="select-article.php?id=<?php echo $data['id']?>"><?php echo $data['title'];?></a> 
             <?php
             echo "<br></br>";
