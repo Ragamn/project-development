@@ -41,7 +41,7 @@
         foreach($result as $data){
              ?>
              <div class="box2" id="box">
-            <h1>記事<h1>
+            <h1>記事</h1>
             <div class="button3">
                 <?php echo $data['title'];?><button type="button" class="delete" onclick="location.href='article-delete2.php?id=<?php echo $data['id']?>'">削除</button>
             </div>

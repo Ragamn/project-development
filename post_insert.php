@@ -21,5 +21,16 @@ session_start();
     //SQL文を実行する
     $stm->execute();
 ?>
-<p>登録しました</p>
-<a href="article-list.php">一覧へ戻る</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>登録しました</p>
+    <a href="article-list.php">一覧へ戻る</a>
+</body>
+</html>

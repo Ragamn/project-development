@@ -35,6 +35,11 @@
             <div class="box2">
             <h1>記事<h1>
             <a href="select-article.php?id=<?php echo $data['id']?>"><?php echo $data['title'];?></a>
+            <?php
+            echo "<br></br>";
+            echo $data['post'];
+            echo "<br></br>";
+            ?>
             </div>
         <?php endforeach; ?>
     </ul>
