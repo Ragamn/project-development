@@ -43,13 +43,12 @@
             if(empty($post)){
                 $error_flag = false;
             }
-            if(!empty($_POST['share'])){
+            if(empty($_POST['share'])){
                 $share = $_POST['share'];
             }else{
                 $error_flag = 1;
             }    
         }
-    
         $deleteflag = 0;
         if($error_flag){
             if(isset($title) && isset($post) && isset($share)){
