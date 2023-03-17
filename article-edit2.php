@@ -6,6 +6,32 @@
     if($_GET){
         $id=$_GET['id'];
     }
+    ?>
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 id="h1">編集画面</h1>
+        <div class="logout">
+        <input type="button" onclick="location.href='logout.php'" value="logout" name="logout">
+        </div>
+    </header>
+    <nav>
+	<ul>
+	<li><a href="article-list.php">Home</a></li>
+	<li><a href="article-post.php">記事投稿</a></li>
+	<li><a href="article-delete.php">記事削除</a></li>
+	<li class="current"><a href="article-edit.php">記事編集</a></li>
+	
+	</ul>
+	</nav>
+    <?php
     if($_POST){
         $error_flag = true;
         $title = trim($_POST['title'],"\x20\t\n\r\0\v　");
@@ -38,24 +64,6 @@
         }
     
         }
-    ?>
-
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <h1 id="h1">編集画面</h1>
-        <div class="logout">
-        <input type="button" onclick="location.href='logout.php'" value="logout" name="logout">
-        </div>
-    </header>
-    
-    <?php
         if(isset($_GET['id'])){
             $id=$_GET['id'];
             require_once 'db_connect.php';
