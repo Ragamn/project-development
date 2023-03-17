@@ -27,17 +27,8 @@ $error_flag = 0;
         }
     }
 
-if(!empty($_POST)){
-    if(User_register($username,$age,$gender,$password)){
-        $_SESSION['username'] = $username;
-        $_SESSION['age'] = $age;
-        $_SESSION['gender'] = $gender;
-        $_SESSION['password'] = $password;
-        header('Location:create-user-confirm.php');
-    }
-}
     
-?>
+    ?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -51,14 +42,25 @@ if(!empty($_POST)){
         <h1 id="h1">ユーザー新規作成画面</h1>
         <div class="login">
             <button type="button" onclick="location.href='login.php'">
-            ログイン
+                ログイン
             </button>
-        
+            
             <button type="button" onclick="location.href='create-user.php'">
-            新規作成
+                新規作成
             </button>
-            </div>
+        </div>
     </header>
+    <?php
+    if(!empty($_POST)){
+        if(User_register($username,$age,$gender,$password)){
+            $_SESSION['username'] = $username;
+            $_SESSION['age'] = $age;
+            $_SESSION['gender'] = $gender;
+            $_SESSION['password'] = $password;
+            header('Location:create-user-confirm.php');
+        }
+    }
+    ?>
 <div class="create-user">
     <form action="create-user.php" method="post">
     <div class="label">
