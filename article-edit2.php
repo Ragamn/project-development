@@ -46,7 +46,7 @@
             if(empty($_POST['share'])){
                 $share = $_POST['share'];
             }else{
-                $error_flag = 1;
+                $error_flag = false;
             }    
         }
         $deleteflag = 0;

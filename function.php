@@ -13,7 +13,7 @@
             $stm->execute();
             return true;
         }catch(PDOException $e){
-            echo $e->getMessage();
+             $e->getMessage();
         }finally{
             $pdo = null;
         }

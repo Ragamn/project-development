@@ -2,80 +2,54 @@
     require_once 'function.php';
 //セッションを使うようにする
 session_start();
-//POSTがあるか確認する
-$error_flag = 0;
-    if(isset($_POST) && !empty($_POST)){
-        if(!empty($_POST['username'])){
-            $username = $_POST['username'];
-        }else{
-            $error_flag = 1;
-        }
-        if(!empty($_POST['age'])){
-            $age = $_POST['age'];
-        }else{
-            $error_flag = 1;
-        }
-        if(!empty($_POST['gender'])){
-            $gender = $_POST['gender'];
-        }else{
-            $error_flag = 1;
-        }
-        if(!empty($_POST['password'])){
-            $password = $_POST['password'];
-        }else{
-            $error_flag = 1;
-        }
-    }
-
-    
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        <h1 id="h1">ユーザー新規作成画面</h1>
-        <div class="login">
-            <button type="button" onclick="location.href='login.php'">
-                ログイン
-            </button>
-            
-            <button type="button" onclick="location.href='create-user.php'">
-                新規作成
-            </button>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="h1">ユーザー新規作成画面</h1>
+            <div class="login">
+                <button type="button" onclick="location.href='login.php'">
+                    ログイン
+                </button>
+                
+                <button type="button" onclick="location.href='create-user.php'">
+                    新規作成
+                </button>
+            </div>
     </header>
     <?php
-    if(!empty($_POST)){
-        if(User_register($username,$age,$gender,$password)){
-            $_SESSION['username'] = $username;
-            $_SESSION['age'] = $age;
-            $_SESSION['gender'] = $gender;
-            $_SESSION['password'] = $password;
-            header('Location:create-user-confirm.php');
-        }
+    if(isset($_SESSION['errorusername'])){
+        echo $_SESSION['errorusername'];
+    }
+    if(isset($_SESSION['errorage'])){
+        echo $_SESSION['errorage'];
+    }
+    if(isset($_SESSION['errorerrorpass'])){
+        echo $_SESSION['errorerrorpass'];
     }
     ?>
-<div class="create-user">
-    <form action="create-user.php" method="post">
-    <div class="label">
-    <p>ユーザー名</p>
-    <input type="text" name="username">
-    </div>
-    <div class="label">
-    <p>年齢</p>
-    <input type="text" name="age">
-    </div>
-    <div class="label">
-    <p>性別</p>
+    <div class="create-user">
+    <form action="create-user-confirm.php" method="post">
+        <div class="label">
+            <p>ユーザー名</p>
+            <input type="text" name="username">
+        </div>
+        <div class="label">
+            <p>年齢</p>
+            <input type="text" name="age">
+        </div>
+        <div class="label">
+            <p>性別</p>
     <input type="radio" name="gender" value=1>女
     <input type="radio" name="gender" value=2>男
-    <input type="radio" name="gender" value=3>その他
+    <input type="radio" name="gender" value=3 checked>その他
     </div>
     <div class="label">
     <p>パスワード</p>
