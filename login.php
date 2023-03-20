@@ -36,6 +36,9 @@
 <body>
     <header>
         <h1 id="h1">ログイン画面</h1>
+        <div class="exit">
+        <input type="button" onclick="location.href='index.php'" value="戻る" name="exit">
+        </div>
     </header>
 <form action="login.php" method="POST">
 

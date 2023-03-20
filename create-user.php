@@ -15,11 +15,11 @@ session_start();
         <header>
             <h1 id="h1">ユーザー新規作成画面</h1>
             <div class="login">
-                <button type="button" onclick="location.href='login.php'">
+                <button type="button" class="login" onclick="location.href='login.php'">
                     ログイン
                 </button>
                 
-                <button type="button" onclick="location.href='create-user.php'">
+                <button type="button" class="register" onclick="location.href='create-user.php'">
                     新規作成
                 </button>
             </div>
