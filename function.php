@@ -43,7 +43,7 @@
             $stm->bindValue(':title',$title,PDO::PARAM_STR);
             $stm->bindValue(':post',$post,PDO::PARAM_STR);
             $stm->bindValue(':share',$share,PDO::PARAM_INT);
-            $stm->bindValue(':deleteflag',$title,PDO::PARAM_STR);
+            $stm->bindValue(':deleteflag',$deleteflag,PDO::PARAM_INT);
 
             $stm->execute();
             return true;

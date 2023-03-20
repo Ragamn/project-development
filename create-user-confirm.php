@@ -31,7 +31,9 @@
             $_SESSION['age'] = $age;
             $_SESSION['gender'] = $gender;
             $_SESSION['password'] = $password;
-
+            unset($_SESSION['errorusername']);
+            unset($_SESSION['errorage']);
+            unset($_SESSION['errorpass']);
             if($_SESSION['gender'] == 1){
                 $_SESSION['gender'] = "女";
             }elseif($_SESSION['gender'] == 2){

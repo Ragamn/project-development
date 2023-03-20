@@ -1,28 +1,42 @@
 <?php
 session_start();
-    //データベース接続用のファイルを読み込む
-    require_once 'db_connect.php';
+require_once 'function.php';
 
-    $title = $_POST['title'];
-    $post = $_POST['post'];
-    $share = $_POST['share'];
-    $userid = $_SESSION['id'];
-    $sql = "INSERT INTO post (userid,title, post, share) VALUES (:userid,:title, :post, :share)";
-
-    //プリペアードステートメントを作成する
-    $stm = $pdo->prepare($sql); 
-
-    //プレースホルダに値をバインドする
-    $stm->bindValue(':userid', $userid, PDO::PARAM_INT);
-    $stm->bindValue(':title', $title, PDO::PARAM_STR);
-    $stm->bindValue(':post', $post, PDO::PARAM_STR);
-    $stm->bindValue(':share', $share, PDO::PARAM_INT);
-
-    //SQL文を実行する
-    $stm->execute();
+if($_POST){
+        $share = $_POST['share'];
+        $userid = $_SESSION['id'];
+        $error_flag = true;
+        $title = trim($_POST['title'],"\x20\t\n\r\0\v　");
+        $post = trim($_POST['post'],"\x20\t\n\r\0\v　");
+        if(isset($_POST) && !empty($_POST)){
+            if(empty($title)){
+                $error_flag = false;
+                $_SESSION['errortitle'] = "タイトルが空です。";
+            }
+            if(empty($post)){
+                $error_flag = false;
+                $_SESSION['errorpost'] = "内容が空です。";
+            }
+            if(!empty($_POST['share'])){
+                $share = $_POST['share'];
+            }
+        }
+        $deleteflag = 0;
+                if($error_flag == false){
+                        header('Location: article-post.php');
+                }else{
+                if(Post($userid,$title,$post,$share,$deleteflag)){
+                    echo "投稿完了";
+                    unset($_SESSION['errorpost']);
+                    unset($_SESSION['errortitle']);
+                    header('Location:article-list.php');
+                    }
+                }
+        
+        }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">

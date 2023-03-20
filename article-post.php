@@ -1,36 +1,16 @@
 <?php
 session_start();
     require_once 'function.php';
-    if(isset($_SESSION)){
 
-    if($_POST){
-    $error_flag = true;
-    $title = trim($_POST['title'],"\x20\t\n\r\0\v　");
-    $post = trim($_POST['post'],"\x20\t\n\r\0\v　");
-    if(isset($_POST) && !empty($_POST)){
-        if(empty($title)){
-            $error_flag = false;
+    if(isset($_SESSION['errortitle']) OR isset($_SESSION['errorpost'])){
+        if(isset($_SESSION['errortitle'])){
+            echo $_SESSION['errortitle'];
         }
-        if(empty($post)){
-            $error_flag = false;
-        }
-        if(!empty($_POST['share'])){
-            $share = $_POST['share'];
-        }else{
-            $error_flag = 1;
+        if(isset($_SESSION['errorpost'])){
+            echo $_SESSION['errorpost'];
         }
     }
-    $userid = $_SESSION['id'];
-    $deleteflag = 0;
-    if($error_flag){
-        if(isset($title) && isset($post) && isset($share) && isset($deleteflag)){
-            if(Post($userid,$title,$post,$share,$deleteflag)){
-                echo "投稿完了";
-                header('Location:article-list.php');
-            }
-        } 
-    }
-    }
+    if(isset($_SESSION)){
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -59,8 +39,8 @@ session_start();
 	</nav>
     <div class="create-post">
     <form action="post_insert.php" method="post">
-            <input type="text" name="title" placeholder="タイトルを入力" required><br>
-            <textarea name="post" rows="10" cols="50" placeholder="内容を入力" required></textarea><br>
+            <input type="text" name="title" placeholder="タイトルを入力"><br>
+            <textarea name="post" rows="10" cols="50" placeholder="内容を入力"></textarea><br>
             <input type="radio" name="share" value="1" >公開
             <input type="radio" name="share" value="DEFAULT" checked>非公開<br>
             <input type="submit" value="送信">
