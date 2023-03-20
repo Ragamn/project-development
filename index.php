@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>ホーム画面</title>
 </head>
 <body>
     <header>
