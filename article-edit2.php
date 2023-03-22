@@ -1,10 +1,10 @@
     <?php
      session_start();
+     require_once 'function.php';
      if(isset($_SESSION)){
-    require_once 'function.php';
     
     if($_GET){
-        $id=$_GET['id'];
+        $id = $_GET['id'];
     }
     ?>
 
@@ -34,8 +34,8 @@
     <?php
     if($_POST){
         $error_flag = true;
-        $title = trim($_POST['title'],"\x20\t\n\r\0\v　");
-        $post = trim($_POST['post'],"\x20\t\n\r\0\v　");
+        $title = trim($_POST['title'],"\x20\t\n\r\0\v ");
+        $post = trim($_POST['post'],"\x20\t\n\r\0\v ");
         if(isset($_POST) && !empty($_POST)){
             if(empty($title)){
                 $error_flag = false;
@@ -43,7 +43,7 @@
             if(empty($post)){
                 $error_flag = false;
             }
-            if(empty($_POST['share'])){
+            if(!empty($_POST['share'])){
                 $share = $_POST['share'];
             }else{
                 $error_flag = false;
