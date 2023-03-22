@@ -60,6 +60,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/favicon.ico">
     <title>ユーザ登録の確認</title>
 </head>
 <body>

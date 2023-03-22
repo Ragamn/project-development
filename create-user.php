@@ -9,6 +9,7 @@ session_start();
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/favicon.ico">
         <title>ユーザー作成</title>
     </head>
     <body>

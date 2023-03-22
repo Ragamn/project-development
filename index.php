@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico">
     <title>閲覧画面</title>
 </head>
 <body>

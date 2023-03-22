@@ -17,6 +17,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico">
     <title>投稿画面</title>
 </head>
 <body>
