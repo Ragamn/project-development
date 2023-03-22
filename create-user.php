@@ -9,7 +9,7 @@ session_start();
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="style.css">
-        <title>Document</title>
+        <title>ユーザー作成</title>
     </head>
     <body>
         <header>

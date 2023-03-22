@@ -17,7 +17,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>投稿画面</title>
 </head>
 <body>
     <header>

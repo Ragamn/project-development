@@ -11,7 +11,7 @@ if(isset($_SESSION)){
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <title>削除</title>
+    <title>削除画面</title>
 </head>
 <body>
     <header>
