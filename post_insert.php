@@ -6,8 +6,8 @@ if($_POST){
         $share = $_POST['share'];
         $userid = $_SESSION['id'];
         $error_flag = true;
-        $title = trim($_POST['title'],"\x20\t\n\r\0\v　");
-        $post = trim($_POST['post'],"\x20\t\n\r\0\v　");
+        $title = trim($_POST['title'],"\x20\t\n\r\0\v ");
+        $post = trim($_POST['post'],"\x20\t\n\r\0\v ");
         if(isset($_POST) && !empty($_POST)){
             if(empty($title)){
                 $error_flag = false;
