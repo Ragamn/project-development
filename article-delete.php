@@ -1,6 +1,10 @@
 <?php
         session_start();
-    if(isset($_SESSION)){
+    //if(isset($_SESSION)){
+        if(!isset($_SESSION['id'])){
+            header('Location: index.php');
+            exit();
+        }
         $id = $_SESSION['id'];
 ?>
 <!DOCTYPE html>
@@ -61,8 +65,3 @@
     </footer>
 </body>
 </html>
-<?php
-    }else{
-        header('Location: index.php');
-    }
-?>
