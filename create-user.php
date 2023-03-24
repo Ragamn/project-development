@@ -32,8 +32,8 @@ session_start();
     if(isset($_SESSION['errorage'])){
         echo $_SESSION['errorage'];
     }
-    if(isset($_SESSION['errorerrorpass'])){
-        echo $_SESSION['errorerrorpass'];
+    if(isset($_SESSION['errorpass'])){
+        echo $_SESSION['errorpass'];
     }
     ?>
     <div class="create-user">
