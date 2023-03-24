@@ -55,7 +55,9 @@
 </div>
 <input type="submit" class="send-login">
 </form>
-
+<div class='create'>
+<a href="create-user.php">新規登録はこちら</a>
+</div>
     <footer>
         
     </footer>

@@ -38,7 +38,8 @@ footer{
 .cp_iptxt {
 	position: relative;
 	width: 80%;
-	margin: 40px 3%;
+	/* margin: 40px 3%; */
+	margin: 60px auto;
 }
 .cp_iptxt input[type='text'] {
 	font: 15px/24px sans-serif;
@@ -94,7 +95,7 @@ footer{
 }
 
 .send-login{
-    margin-left: 1025px;
+    margin-left: 80%;
 }
 
 nav{
@@ -174,4 +175,7 @@ nav{
 	width:100px;
 	height:50px;
 	background-color:#aaaaaa;
+}
+.create{
+	text-align: center;
 }
