@@ -25,6 +25,7 @@ session_start();
                 </button>
             </div>
     </header>
+    <h4>
     <?php
     if(isset($_SESSION['errorusername'])){
         echo $_SESSION['errorusername'];
@@ -36,6 +37,7 @@ session_start();
         echo $_SESSION['errorpass'];
     }
     ?>
+    </h4>
     <div class="create-user">
     <form action="create-user-confirm.php" method="post">
         <div class="label">
