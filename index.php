@@ -31,8 +31,7 @@
         $result = $stm->fetchAll(PDO::FETCH_ASSOC);
 
     ?>
-    <ul>
-        <?php foreach ($result as $data): ?>
+        <?php foreach ($result as $data){?>
             <div class="box2">
             <h1>記事<h1>
             <a href="select-article.php?id=<?php echo $data['id']?>"><?php echo $data['title'];?></a>
@@ -42,8 +41,7 @@
             echo "<br></br>";
             ?>
             </div>
-        <?php endforeach; ?>
-    </ul>
+        <?php } ?>
         
 
     </div>
