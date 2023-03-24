@@ -30,7 +30,7 @@
     <?php
         require_once 'db_connect.php';
         echo "<br></br>";
-        $sql = "SELECT * FROM post WHERE share = 1 AND delete_flag = 0 AND userid = :id";
+        $sql = "SELECT * FROM post WHERE share = 1 AND delete_flag = 0 AND userid = :id ORDER BY id DESC";
         $stm = $pdo->prepare($sql);
         $stm->bindValue(':id',$id,PDO::PARAM_INT);
          //SQL文を実行する
