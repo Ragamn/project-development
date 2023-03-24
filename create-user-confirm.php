@@ -2,9 +2,9 @@
     session_start();
     require_once 'function.php';
     $error_flag = true;
-    $_POST['username'] = trim($_POST['username'],"\x20\t\n\r\0\v　");
-    $_POST['age'] = trim($_POST['age'],"\x20\t\n\r\0\v　");
-    $_POST['password'] = trim($_POST['password'],"\x20\t\n\r\0\v　");
+    $_POST['username'] = trim($_POST['username'],"\x20\t\n\r\0\v ");
+    $_POST['age'] = trim($_POST['age'],"\x20\t\n\r\0\v ");
+    $_POST['password'] = trim($_POST['password'],"\x20\t\n\r\0\v ");
     if(isset($_POST) && !empty($_POST)){
         if(!empty($_POST['username'])){
             $username = $_POST['username'];
