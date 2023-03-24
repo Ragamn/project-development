@@ -144,6 +144,23 @@ nav{
     border: solid 1px black;
 	background-color: lemonchiffon;
 }
+.login-label{
+	text-align: center;
+	padding:10px;
+	margin:30px auto;
+	width: 300px;
+	height: 110px;
+    border: solid 1px #FFF;
+	background-color: #FFF;
+}
+.login-label form{
+	margin-left: 25%;
+	float: left;
+}
+.login-label input{
+	padding: 5px;
+	background-color: #F33135;
+}
 .label{
 	text-align:center;
 }
@@ -178,4 +195,8 @@ nav{
 }
 .create{
 	text-align: center;
+}
+#title{
+	width: 90%;
+	height: 30px;
 }

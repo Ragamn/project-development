@@ -40,7 +40,7 @@ session_start();
 	</nav>
     <div class="create-post">
     <form action="post_insert.php" method="post">
-            <input type="text" name="title" placeholder="タイトルを入力"><br>
+            <input type="text" id='title' name="title" placeholder="タイトルを入力"><br>
             <textarea name="post" rows="10" cols="50" placeholder="内容を入力"></textarea><br>
             <input type="radio" name="share" value="1" >公開
             <input type="radio" name="share" value="DEFAULT" checked>非公開<br>

@@ -46,6 +46,7 @@ if(isset($_SESSION)){
         }
         if(!isset($_POST['YES'])){
         ?>
+    <div class='login-label'>
     <h1>削除しますか？</h1>
     <form action="article-delete2.php?id=<?php echo $id?>" method="POST">
     <input type="submit" value="YES" name="YES">
@@ -53,6 +54,7 @@ if(isset($_SESSION)){
     <form action="article-delete.php" method="POST">
     <input type="submit" value="NO" name="NO">
     </form>
+    </div>
     <?php } ?>
     <footer>
 
